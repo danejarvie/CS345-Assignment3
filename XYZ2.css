@@ -1,0 +1,40 @@
+
+body {
+    background-color: rgb(61,63,64);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.login-main-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.logo {
+  width: 150px;
+  position: relative;
+  top: 200px;
+}
+.form {
+  position: relative;
+  top: 230px;
+  text-align: center;
+  padding: 5px;
+}
+.form-element {
+  margin: 5px;
+  color:rgb(217,213,207);
+}
+.textbox {
+	color: rgb(64,63,61);
+}
+.sign-off {
+	padding: 5px;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: rgb(217,213,207);
+}

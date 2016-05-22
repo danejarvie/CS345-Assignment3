@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="utf-8">
+<title> XYZ | HOME </title>
+
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> <!-- FontAwesome CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"> <!-- Bootstrap Toggle CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/css/bootstrap-slider.min.css"> <!-- Bootstrap Slider CSS -->
+<link rel="stylesheet" href="XYZ1.css">
+
+
+<meta name="author" content="Dane Jarvie">
+<meta name="description" content="CS345 Assignment 3: Web Interface for XYZ Home Automation">
+
+</head>
+
+<!------------------------------------------------------------------------->
+
+<!-- Start Body -->
+<body>
+<!-- Start Wrapper -->
+<div class="wrapper">
+<!-- Start Header -->
+	<header class="header-main">
+		<div class="header-logo"> <!-- The header bar will have the title, settings, login/logout etc -->
+			<a class="xyz-logo" href="XYZ_Index.html"><img src="logo.png" height="60" ></a>
+		</div>
+		<div class="header-menu">
+      <ul>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Climate</a></li>
+        <li><a href="#">Lighting</a></li>
+        <li><a href="#">Energy</a></li>
+        <li><a href="#">Entertainment</a></li>
+      </ul>
+		</div>
+		<div>
+
+			<a class="logout-button" href="XYZ4.html">LOGOUT</a>
+      <a class="settings-button" href='#'><span class="glyphicon glyphicon-cog"></span></a>
+
+		</div>
+	</header>
+<!-- End Header -->
+<!-- Start main-frame -->
+	<div class="main-frame">
+		<div class="presets-frame">
+			<p style="display: inline;"> ACTIVE PRESET: </p>
+					<select class="preset-menu" id="presets">
+						<option value="0" selected="true">None</option>
+						<option value="1">At work</option>
+						<option value="2">On Holiday</option>
+						<option value="3">Dinner Party</option>
+						<option value="4">Movie Night</option>
+					</select>
+		</div>
+<!-- Start rooms-frame -->
+	   <div class="rooms-frame">
+		    <div id="entrance-menu-frame" class="room-frame row1 col1">
+				     <a id="entrance-icon" class="room-frame" href="#"><img src="RoomImages/Entrance.png" class="room-frame"></a>
+             <div id="entrance-menu" class="room-menu-frame" style="display: none">
+               <button id="entrance-button" class="BigButton"> ENTRANCE <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+					<div class="room-menu">
+						<div class="room-menu-option"><div class="room-menu-label">House Alarm</div><input checked data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option"><div class="room-menu-label">Door Lock</div><input checked data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option"><div class="room-menu-label">Door Light</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option"><div class="room-menu-label">Path Light</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+					</div>
+
+             </div>
+				</div>
+				<div id="kitchen-menu-frame" class="room-frame row1 col2">
+				      <a id="kitchen-icon" class="room-frame" href="#"><img src="RoomImages/Kitchen.png" class="room-frame"></a>
+              <div id="kitchen-menu" class="room-menu-frame" style="display: none">
+              <button id="kitchen-button" class="BigButton"> KITCHEN <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+					<div class="room-menu">
+						<div class="room-menu-option"><div class="room-menu-label">Main Lights</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option"><div class="room-menu-label">Pantry Lights</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option"><div class="room-menu-label">Bar Lights</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						
+
+					</div>
+            </div>
+        </div>
+				<div id="living-menu-frame" class="room-frame row1 col3">
+             <a id="living-icon" class="room-frame" href="#"><img src="RoomImages/Living.png" class="room-frame"></a>
+             <div id="living-menu" class="room-menu-frame" style="display: none">
+               <button class="BigButton"> LIVING <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+             </div>
+        </div>
+				<div id="outdoor-menu-frame" class="room-frame row2 col1">
+				      <a id="outdoor-icon" class="room-frame" href="#"><img src="RoomImages/Outdoor.png" class="room-frame"></a>
+              <div id="outdoor-menu" class="room-menu-frame" style="display: none">
+                <button class="BigButton"> OUTDOOR <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            </div>
+        </div>
+				<div id="dining-menu-frame" class="room-frame row2 col2">
+						 <a id="dining-icon" class="room-frame" href="#"><img src="RoomImages/Dining.png" class="room-frame"></a>
+						 <div id="dining-menu" class="room-menu-frame" style="display: none">
+							 <button class="BigButton"> DINING <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						 </div>
+				</div>
+        <div id="bedroom1-menu-frame" class="room-frame row2 col3">
+              <a id="bedroom1-icon" class="room-frame" href="#"><img src="RoomImages/MasterBedroom.png" class="room-frame"></a>
+              <div id="bedroom1-menu" class="room-menu-frame" style="display: none">
+                <button class="BigButton"> MASTER BEDROOM <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+            </div>
+        </div>
+				<div id="entrance-menu-frame2" class="room-frame row3 col1">
+						 <a id="entrance-icon2" class="room-frame" href="#"><img src="RoomImages/Bedroom2.png" class="room-frame"></a>
+						 <div id="entrance-menu2" class="room-menu-frame" style="display: none">
+							 <button class="BigButton"> BEDROOM 2 <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						 </div>
+				</div>
+				<div id="kitchen-menu-frame2" class="room-frame row3 col2">
+							<a id="kitchen-icon2" class="room-frame" href="#"><img src="RoomImages/Bedroom3.png" class="room-frame"></a>
+							<div id="kitchen-menu2" class="room-menu-frame" style="display: none">
+							<button class="BigButton"> BEDROOM 3 <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						</div>
+				</div>
+				<div id="dining-menu-frame2" class="room-frame row3 col3">
+						 <a id="dining-icon2" class="room-frame" href="#"><img src="RoomImages/MasterEnsuite.png" class="room-frame"></a>
+						 <div id="dining-menu2" class="room-menu-frame" style="display: none">
+							 <button class="BigButton"> MASTER ENSUITE <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						 </div>
+				</div>
+				<div id="outdoor-menu-frame2" class="room-frame row4 col1">
+							<a id="outdoor-icon2" class="room-frame" href="#"><img src="RoomImages/Garage.png" class="room-frame"></a>
+							<div id="outdoor-menu2" class="room-menu-frame" style="display: none">
+								<button class="BigButton"> GARAGE <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						</div>
+				</div>
+				<div id="living-menu-frame2" class="room-frame row4 col2">
+						 <a id="living-icon2" class="room-frame" href="#"><img src="RoomImages/Laundry.png" class="room-frame"></a>
+						 <div id="living-menu2" class="room-menu-frame" style="display: none">
+							 <button class="BigButton"> LAUNDRY <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						 </div>
+				</div>
+				<div id="bedroom1-menu-frame2" class="room-frame row4 col3">
+							<a id="bedroom1-icon2" class="room-frame" href="#"><img src="RoomImages/Bathroom.png" class="room-frame"></a>
+							<div id="bedroom1-menu2" class="room-menu-frame" style="display: none">
+								<button class="BigButton"> BATHROOM <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+						</div>
+				</div>
+		</div> <!-- End rooms-frame -->
+		<div style="width: 1080px;">
+		<div id="entrance-lg" class="room-menu-lg" style="display: none">
+			<button id="entrance-button2" class="BigButton2" onclick="hide-room-menu()"> ENTRANCE </button>
+			<div>
+				<div class="room-menu-lg-left-col">
+						<h3> DEVICES </h3>
+						<div class="room-menu-option room-menu-option-lg"><button class="room-menu-label SmallButton">Alarm</button><div class="room-menu-spacer"></div><input checked data-onstyle="danger" data-width="100px" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option room-menu-option-lg"><button class="room-menu-label SmallButton">Door</button><div class="room-menu-spacer"></div><input checked data-on="Locked" data-off="Unlocked" data-onstyle="danger" data-width="100px" data-toggle="toggle" type="checkbox"></div>
+						<hr style="border-width: 3px; border-color: rgb(64,63,61);">
+						<h3> LIGHTING </h3>
+						<div class="room-menu-option room-menu-option-lg"><div class="room-menu-label">Door</div><input checked data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option room-menu-option-lg"><div class="room-menu-label">Path</div><input checked data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						<div class="room-menu-option room-menu-option-lg"><div class="room-menu-label">Foyer</div><input data-onstyle="danger" data-toggle="toggle" type="checkbox"></div>
+						
+						<input id="ex1" style="width: 400px; left: 40px;" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="100"/>
+				</div>
+				<div class="room-menu-lg-right-col">
+					<div class="feed-frame">
+						<img class="feed1" src="charlotte-home.jpg">
+					</div>
+					<button id="entrance-ptt" class="BigButton2" onmousedown="micOn()" onmouseup="micOff()"><i id="mic" class="fa fa-microphone"></i> Push To Talk  </button>
+
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="kitchen-lg" class="room-menu-lg" style="display: none">
+			<button id="kitchen-button2" class="BigButton2" onclick="hide-room-menu()"> KITCHEN </button>
+		</div>
+</div> <!-- End main-frame -->
+
+
+<div class="footer-main"> <!-- Start footer -->
+	<div>
+		<div class="social-menu">
+			<ul>
+				<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://github.com/danejarvie"><i class="fa fa-github"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<p class="sign-off"> &copy Dane Jarvie<br> 2521969</p>
+	</div>
+</div>
+<!-- End footer -->
+<!-- End wrapper -->
+</div>
+<script src="jquery-1.12.3.min.js"></script>  <!-- Local JQuery -->
+<script src="js/bootstrap.min.js"></script> <!-- Local bootstrap libraries -->
+<script src="bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>  <!--Local Bootstrap-Toggle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/7.0.2/bootstrap-slider.min.js"></script> <!-- Bootstrap Slider CDN -->
+<script src="dynamics.js"></script>
+
+
+
+</body>
+</html>
